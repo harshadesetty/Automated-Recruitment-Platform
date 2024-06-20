@@ -1,0 +1,909 @@
+/first iteration/
+html {
+    scroll-padding-top: 83px; /* Adjust this value to match your navbar height */
+  }
+
+
+body{
+    min-width:636px; 
+    margin: 0; /* Remove default margin for better layout */
+    padding:0;
+    font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    overflow-y: scroll;
+    /* overflow-x: hidden; */
+}
+#background-content {
+    position: relative;
+    height: 100vh;
+    background-color: #4555a1;
+    overflow: hidden; 
+   
+}
+.css-typing p {
+  border-right: .15em solid rgb(255, 255, 255);
+  color:#77d1d2;
+  font-family: "Courier";
+  font-size: 36px;
+  font-weight: 50px;
+  margin-left: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.css-typing p:nth-child(1) {
+  width: 14em;
+  margin-top: 50px;
+  -webkit-animation: type 2s steps(40, end);
+  animation: type 2s steps(40, end);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.css-typing p:nth-child(2) {
+  width: 24em;
+  opacity: 0;
+  -webkit-animation: type2 2s steps(40, end);
+  animation: type2 2s steps(40, end);
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .15em solid rgb(255, 255, 255);
+  }
+  100% {
+    border: none;
+  }
+}
+
+@-webkit-keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .15em solid rgb(255, 255, 255);
+  }
+  100% {
+    border: none;
+  }
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .15em solid rgb(255, 255, 255);
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@-webkit-keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .15em solid rgb(255, 255, 255);
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    border-color: tranparent;
+  }
+}
+
+
+
+
+.logo{
+    padding-top: 10%;
+   
+    animation: logo 2.5s ease 0s 1 normal forwards;
+   
+}
+#lg{
+  width: 460px;
+  height: 330px;
+  padding-left: 34%;
+}
+@keyframes logo {
+	0% {
+		transform: translateY(-100px);
+	}
+    50%{
+        transform: translate(0px);
+    }
+	100% {
+		transform: translateY(-100px);
+	}
+}
+
+#sliding-page {
+    position: absolute;
+    top: 0;
+   
+   left: -100%; 
+    width: 100%; 
+    background-color: #ffffff;  
+    transition: all 1.5s ease-in-out; 
+    transition-delay: 0.1s;
+}
+
+#sliding-page.active {
+left: 0; 
+}
+
+#cdp {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#cdp img {
+    width: 150px;
+    height: 90px;
+}
+
+.grey {
+    background-color: rgb(255, 255, 255);
+    padding-bottom: 0;
+}
+
+#clg img {
+    width: 460px;
+    height: 75px;
+    padding-top: 0.5%;
+    padding-left: 0.3%;
+}
+@media screen  and (max-width: 771px){
+  #cdp img {
+    width: 100px;
+    height: 90px;
+}
+
+  
+}
+@media screen and (max-width: 768px) {
+  #logo {
+      padding-top: 15%;
+      padding-left: 30%;
+  }
+
+  #cdp img {
+      width: 106px;
+      height: 65px;
+  }
+
+  #clg img {
+      width: 300px;
+      height: 50px;
+      padding-left: 1%;
+  }
+}
+@media screen and (max-width: 480px) {
+  #logo {
+      padding-top: 20%;
+      padding-left: 20%;
+  }
+
+  #cdp img {
+      width: 85px;
+      height: 50px;
+  }
+
+  #clg img {
+      width: 200px;
+      height: 40px;
+      padding-left: 2%;
+  }
+}
+
+/*second
+ iteration*/
+#nav-bar {
+    position: sticky;
+    top: 0px;
+    margin-top: 0;
+    /* width:100% */
+    background-color: #6676be;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding-top: 11px;
+}
+
+#nav-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+   
+}
+
+#nav-bar li {
+    margin: 13px;
+} 
+
+#nav-bar a {
+    text-transform: uppercase;
+    font-size: 19px;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-weight: bold;
+    /* margin-top: 10px; */
+    /* line-height: 50px; */
+    transition: color 0.3s ease;
+}
+
+#nav-bar a:hover {
+    color: rgb(0, 0, 0);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+  align-self: flex-end; /* Align button to the end of the flex container */
+}
+
+.menu-toggle.active{
+  content: '✖'; /* Changes button content to 'X' */
+}
+
+@media (max-width: 1159px) {
+  #nav-bar ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      background-color: #6676be;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      padding: 10px 0; /* Added padding for spacing */
+
+
+  }
+
+  #nav-bar li {
+      margin: 10px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    float: right;
+}
+
+  #nav-bar ul.show {
+      display: flex;
+  }
+}
+
+.fixed-navbar {
+    margin-top: 0;
+    background-color: #6676be;
+    height: 10%;
+    display: flex;
+    width: 100%; /* Full width */
+    align-items: center;
+    justify-content: center; /* Below the logos */
+ 
+}
+
+#buttoni {
+    padding-top: 5px;
+    align-items: center;
+    width: 145px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background: #77d1d2;
+    font-weight: bold;
+    font-size: 1.0em;
+    color:#ffffff;
+    outline: none;
+    margin-top: -15px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  #buttoni:active {
+    /*set time duration to your needs */
+    animation: gradient 100ms;
+    background: #e6e6e6;
+    color: #000000;
+    box-shadow:none;
+  }
+
+
+
+.iiitmcont{
+  background-image: url(/images/total2.jpg);
+  width:100%;
+  height:78vh;
+  background-repeat: no-repeat;
+  /* border: 2px solid black; */
+  background-position: center center;  /* Centers the image within the container */
+  background-size: cover;  /* Scales image to cover the container, potentially cropping */
+  overflow: hidden;  /* Hides overflowing parts of the image (optional) */
+}
+
+#over1{
+  color: rgb(20, 28, 61);
+  text-align:center;   
+  font-family:math;
+  font-weight: 600;
+  font-size: 41px;
+  padding-top: 25px;
+}
+
+#diya{
+  width: 600px;
+  height: 370px;
+  margin-top: 50px;
+  margin-left: 40px;
+}
+
+#connection{
+height: 200px;
+width:700px;
+margin-left:60px;
+margin-top:100px; 
+padding-top:20px;
+/* border:2px solid black; */
+font-size:17px;
+}
+
+.info{
+  display: flex;
+  flex-wrap: wrap;
+  /* border:2px solid black; */
+}
+
+
+ #frame {
+    position: fixed; /* Keep it positioned over main content */
+    top: 50%; /*Center vertically */
+    left: 50%;/* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust positioning for centering */
+    background-color: #ffffff; /* Example background color */
+    padding: 20px;
+    border: 1px solid #ccc; /* Example border */
+    border-radius: 5px;
+    width: 60vw; /* Set a maximum width for the frame */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Example shadow */
+    display: none; /* Initially hidden */
+    opacity: 100;
+    z-index: 1000;
+}
+
+#frame.visible {
+    display: block; /* Show the frame on button click */
+    opacity: 100%;
+}
+
+#programs, #facilities {
+    padding-right: 10px;
+}
+
+#box1{
+    width: 29.6%;
+    position: relative;
+    left:5%;
+    margin-top:5.7%;
+    padding: 10px;
+    border: 10px solid rgb(128, 128, 128);
+    max-height: 50vh;
+    overflow: hidden;
+}
+
+#out-box{
+    display: flex;
+    padding-bottom: 5%;
+    margin-top: 45px;
+    /* padding-top: 20px; */
+   flex-wrap: wrap;
+    
+}
+#box2{
+    width: 32%;
+    position: relative;
+    left:7%;
+    margin-top:5.7%;
+    padding: 0px 7px 10px 7px;
+    border: 10px solid rgb(128, 128, 128);
+    z-index: 1;
+    max-height: 350px;
+    overflow: hidden;
+}
+.bro{
+    width: 20%;
+    border:10px solid rgb(128, 128, 128) ;
+    position: relative;
+    left: 9%;
+    margin-top: 17.5%;
+    height: 130px;
+   }
+#wall{
+     width: 330px;
+     height: 230px;
+     position: absolute;
+     /* margin-top: 23px; */
+     margin-left: 8.7%;
+
+   }
+ #pic{
+    position: relative;
+    left: 30.5%;
+    padding-top: 3%;
+ }
+#frame1 {
+    position: fixed; /* Keep it positioned over main content */
+    top: 50%; /*Center vertically */
+    left: 50%;/* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust positioning for centering */
+    background-color: #ffffff; /* Example background color */
+    padding: 20px;
+    border: 1px solid #ccc; /* Example border */
+    width: 70vw; /* Set a maximum width for the frame */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Example shadow */
+    display: none; /* Initially hidden */
+    opacity: 100;
+    border-radius: 5px;
+}
+
+#facilities, #programs {
+    max-height: 65vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+#dept>li>a {
+    text-decoration: none;
+    color: #005cbd;
+}
+
+#dept>li>a:visited {
+    color: #005cbd;
+}
+#brochure{
+    text-decoration: none;
+    color: #150d39;
+ position: relative;
+ top: 27px;
+right: 49px;
+font-size: 16px;
+font-weight: bold;
+}
+
+#frame1.visible {
+    display: block; /* Show the frame on button click */
+    opacity: 100%;
+}
+
+#close-button, #close-button1, #alumni-close, #rankings-close, #develop-close {
+    background-color: rgb(215, 9, 9);
+    position: fixed; /* Keep the container fixed at the top */
+    top: 20px; /* Adjust top position */
+    right: 50px; 
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#close-button1:hover {
+    background-color: rgb(185, 9, 9);
+}
+
+#open-button, #open-button1{
+    position: absolute;
+    bottom: 5px;
+    border:2px solid black;
+    margin:0 0 3px 3px;
+    border-radius: 4px;
+    padding:5px 10px;
+    font-size: 14px;
+    background-color: rgb(63, 51, 150);
+    color:white;
+    cursor:pointer;
+}
+
+
+.overlay {
+    display: none;
+}
+.hidden {
+  display: none;;
+}
+.visible {
+    display: block;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0; /* Ensure overlay is above other content */
+}
+.a-container{
+ background-color: #e2e7f8;
+  
+}
+@media screen and (max-width: 1263px) {
+  /* Adjustments for smaller screens */
+  #iiitm {
+      height: auto;
+      min-height: 400px; /* Adjust as needed */
+      width: 50vw;
+  }
+
+  #book,
+  #dash1,
+  #dash2 {
+      left: 0;
+      margin-left: 0;
+      text-align: center;
+  }
+
+  #diya,
+  #connection,
+  .bro {
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .info {
+      justify-content: center;
+  }
+
+  #wall {
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  #pic {
+      left: 0;
+      text-align: center;
+  }
+
+  #box1,
+  #box2 {
+      width: 90%;
+      left: 5%;
+      margin-top: 10px; /* Adjust as needed */
+  }
+
+  #box1,
+  #box2,
+  .bro {
+      position: static;
+      border-width: 5px; /* Adjust as needed */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Adjustments for smaller screens */
+  #pic {
+      left: 0;
+      text-align: center;
+  }
+
+  #frame1 {
+      width: 90vw; /* Adjust frame width for smaller screens */
+  }
+
+  #facilities,
+  #programs {
+      max-height: 50vh; /* Adjust max-height for smaller screens */
+  }
+}
+@media screen and (max-width: 768px) {
+  #close-button, #close-button1 {
+      top: 10px; /* Adjust top position */
+      right: 10px; /* Adjust right position */
+      padding: 4px 8px; /* Adjust padding */
+      font-size: 12px; /* Adjust font size */
+  }
+
+  #open-button, #open-button1 {
+      bottom: 10px; /* Adjust bottom position */
+      padding: 4px 8px; /* Adjust padding */
+      font-size: 12px; /* Adjust font size */
+  }
+
+  #frame1 {
+      width: 90vw; /* Adjust width for smaller screens */
+      padding: 10px; /* Adjust padding */
+      max-height: 80vh; /* Adjust max height */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #close-button, #close-button1 {
+      top: 5px; /* Adjust top position */
+      right: 5px; /* Adjust right position */
+      padding: 3px 6px; /* Adjust padding */
+      font-size: 10px; /* Adjust font size */
+  }
+
+  #open-button, #open-button1 {
+      bottom: 5px; /* Adjust bottom position */
+      padding: 3px 6px; /* Adjust padding */
+      font-size: 10px; /* Adjust font size */
+  }
+
+  #frame1 {
+      width: 95vw; /* Adjust width for smaller screens */
+      padding: 5px; /* Adjust padding */
+      max-height: 90vh; /* Adjust max height */
+  }
+}
+/* @media screen and (max{
+  
+} */
+
+/fourth iteration/
+
+
+.fancy {
+  padding: 2em;
+  width: 100%;
+  height: 90%;
+  box-sizing: border-box;
+  /* margin-top: 40px; */
+  padding-bottom: 4em;
+
+  /* At the bottom of our background stack,
+      let's have a misty grey solid color */
+  background-color:rgb(206, 204, 204);
+  /* z-index: -100; */
+
+  /* We stack linear gradients on top of each
+      other to create our color strip effect.
+      As you will notice, color gradients are
+      considered to be images and can be
+      manipulated as such */
+  background-image: linear-gradient(175deg, rgb(0 0 0 / 0%) 95%, #17046c 95%),
+  linear-gradient( 85deg, rgb(0 0 0 / 0%) 97%, #17046c 95%),
+  linear-gradient(175deg, rgb(0 0 0 / 0%) 91%, #6676be 60%),
+  linear-gradient( 85deg, rgb(0 0 0 / 0%) 95.3%, #6676be 86%),
+  linear-gradient(175deg, rgb(0 0 0 / 0%) 87%, #96bdef 80%),
+  linear-gradient( 85deg, rgb(0 0 0 / 0%) 93.5%, #9cbdef 83%),
+  linear-gradient( 85deg, rgb(0 0 0 / 0%) 98%, #90c3cb 80%);
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.fancy>div>h1 {
+    text-align: center;
+    color: rgb(28, 16, 82);
+    font-size: 33px;
+    font-family: math;
+}
+
+#whymatter {
+    width: 80%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", Noto Color Emoji;
+    font-weight: 5px;
+}
+
+#whymatter>p { 
+    text-align: justify;
+    color: rgb(15, 22, 71);
+    
+}
+
+.extras {
+  display: flex;
+  width: 80vw;
+  justify-content: space-between;
+}
+
+.alumni, .rankings, .overalldev {
+  width : 15vw;
+  padding: 20px;
+  text-align:center;
+  align-items: center;
+  border-radius: 13px;
+  color: rgb(15, 22, 71);
+}
+
+#alumni-btn, #rankings-btn, #dev-btn{
+  bottom: 5px;
+  border:2px solid black;
+  margin:0 0 3px 3px;
+  border-radius: 4px;
+  padding:5px 10px;
+  font-size: 14px;
+  background-color: rgb(63, 51, 150);
+  color:white;
+  cursor:pointer;
+}
+
+#frame-alumni,#frame-rankings,#frame-develop{
+    position: fixed; /* Keep it positioned over main content */
+    top: 50%; /*Center vertically */
+    left: 50%;/* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust positioning for centering */
+    background-color: #ffffff; /* Example background color */
+    padding: 20px;
+    border: 1px solid #ccc; /* Example border */
+    max-height: 75vh;
+    max-width: 75vw; /* Set a maximum width for the frame */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Example shadow */
+    display: none; /* Initially hidden */
+    opacity: 100;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#frame-alumni.visible {
+  display: block; /* Show the frame on button click */
+  opacity: 100%;
+}
+
+#frame-rankings.visible{
+  display: block; /* Show the frame on button click */
+  opacity: 100%;
+}
+#frame-develop.visible{
+  display: block; /* Show the frame on button click */
+  opacity: 100%;
+}
+
+.extras-scrolls {
+  width: 65vw;
+  max-height: 75vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.extras-scrolls > p {
+  font-size: 28px;
+}
+
+
+
+img[alt="IIITM Rankings"] {
+  width: 60vw;
+}
+
+img[alt="IIITM Alumni"] {
+  width: 60vw;
+}
+
+
+.director{
+  height: 350px;
+  width: 500px; 
+  /* margin-top: 80px; */
+  margin-left: 50px;
+}
+
+.msg-container{
+  display: flex;
+  margin-top: 120px;
+  
+}
+
+#dirmsg{
+  
+  height: 370px;
+  width: 730px;
+  
+  background-color: #b3d0f8;
+  margin-left: 95px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+}
+
+
+#dirname{
+  float:right;
+
+}
+#head{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 30px;
+  
+  
+}
+
+#deanname{
+float:right;
+}
+
+.cdpmsg{
+  height: 400px;
+  width: 800px;
+  background-color: #b3d0f8;
+  margin-top: 65px;
+  margin-left: 40px;
+  border-radius: 20px;
+  padding:20px;
+}
+.sec{
+  display: flex;
+}
+#anurag{
+  height: 425px;
+  width: 430px;
+  margin-left: 110px;
+  margin-top: 90px;
+}
+
+
+/* #procedure{
+  background-color: #dbeff4;
+  border-radius: 40px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+
+  
+}
+#rec{
+ text-align: center;
+ padding-top: 80px;
+} */
+#pla{
+  text-align: center;
+  padding-top: 50px;
+}
+.pair{
+  background-color: #6489a8;
+  
+  border-radius: 15px;
+  width: 60%;
+  padding-left: 25px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-left: 20%;
+}
+.stats{
+ background-image: url(images/Untitled\ design.jpg);
+ width: 99vw;
+ /* height: 100%; */
+ height: 100%;
+ margin-top: -22px;
+}
